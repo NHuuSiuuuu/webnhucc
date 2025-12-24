@@ -1,10 +1,24 @@
-import "./App.css";
+import React from "react";
+import { Toaster, toast } from "sonner";
+import { BrowserRouter, Routes, Route } from "react-router";
+import HomePage from "./pages/HomePage";
+import NotFound from "./pages/NotFound";
 
 function App() {
-
   return (
     <>
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
+      <Toaster />
+      <button onClick={() => toast("Hello")}>toaster</button>
+      
+      <BrowserRouter>
+        <Routes>
+          {/* Route Home */}
+          <Route path="/" element={<HomePage />} />
+
+          {/* Route NotFound */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
