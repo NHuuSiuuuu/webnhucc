@@ -1,5 +1,5 @@
 import React from "react";
-import { Toaster, toast } from "sonner";
+import { Toaster } from "sonner";
 import { BrowserRouter, Routes, Route } from "react-router";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
@@ -8,8 +8,7 @@ function App() {
   return (
     <>
       <Toaster />
-      <button onClick={() => toast("Hello")}>toaster</button>
-      
+
       <BrowserRouter>
         <Routes>
           {/* Route Home */}
