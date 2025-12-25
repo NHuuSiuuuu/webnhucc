@@ -1,3 +1,5 @@
+import { Plus } from "lucide-react";
+import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 
@@ -11,6 +13,10 @@ function AddTask() {
           placeholder="Cần phải làm gì?"
           className="h-12 text-base border bg-slate-50 focus:border-primary/50 focus:ring-primary/20" // ring là lớp ngoài bao boder
         />
+
+        <Button variant="gradient" size="xl" className="px-6">
+          <Plus className="size-5" /> Thêm
+        </Button>
       </div>
     </Card>
   );
